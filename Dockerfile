@@ -1,0 +1,11 @@
+FROM python:3.6
+
+ENV PYTHONUNBUFFERED 1
+ENV APPLICATION_ROOT /code/
+
+RUN mkdir $APPLICATION_ROOT
+COPY . $APPLICATION_ROOT
+WORKDIR $APPLICATION_ROOT
+
+ADD requirements.txt /code/
+RUN pip install -r requirements.txt

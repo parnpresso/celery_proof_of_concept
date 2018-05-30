@@ -1,0 +1,21 @@
+{% block content %}
+
+<h2>Celery proof of concept</h2>
+<form method="get">
+    {% csrf_token %} {{ form }}
+    <button type="submit">A</button>
+</form>
+<form method="get">
+    {% csrf_token %}
+    <button type="submit">B</button>
+</form>
+
+<form method="get">
+    {% csrf_token %}
+    <button type="submit">A`</button>
+</form>
+
+<form method="get">
+    {% csrf_token %}
+    <button type="submit">B`</button>
+</form> {% endblock %}
